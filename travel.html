@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Stories</title>
+
+    <style>
+        /* So this here is the main body style, just making the page look cleaner with padding and a light grey bg */
+        
+        body {
+            font-family: Arial, sans-serif;
+            /* choosed arial cause it's easy to read */
+            padding: 40px;
+            /* gives the content some breathing space */
+            background-color: #f0f0f0;
+            /* soft gray background looks modern-ish */
+        }
+        /* styling the main headings to be a bit darker, nothing fancy */
+        
+        h1,
+        h2 {
+            color: #333;
+            /* this is a dark gray instead of pitch black – easier on the eyes */
+        }
+        /* Table layout for our destinations list */
+        
+        .travel-table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            border: 3px solid #3399cc;
+            /* colorful border just to add more vibeee */
+        }
+        /* This targets header cells and adds boldness + nice background */
+        
+        .travel-table th {
+            background-color: #3399cc;
+            /* soft blue header */
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+            text-align: left;
+        }
+        /* Row styling */
+        
+        .travel-table td {
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: left;
+            background-color: #fff;
+        }
+        /* Zebra effect – every other row gets a slightly diff bg */
+        
+        .travel-table tr:nth-child(even) td {
+            background-color: #e8f4fa;
+            /* light blue tint to alternate rows */
+        }
+        /* image size and hover effect for the attraction pics */
+        
+        .travel-table img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s ease, opacity 0.3s ease;
+            /* added opacity for that new hover effect */
+        }
+        /* lil zoom effect PLUS opacity fade when mouse hovers over the pic */
+        
+        .travel-table img:hover {
+            transform: scale(1.05);
+            opacity: 0.75;
+            /* fade effect – makes it feel interactive */
+        }
+        /* these are the sections at the bottom with info abt each attraction */
+        
+        .destination-info {
+            margin-top: 60px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* remove weird spacing from top of these sub-headings */
+        
+        .destination-info h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main heading at the top of the page -->
+    <h1>Travel Destinations</h1>
+
+    <!-- this is the main table with destination and image that links to the info below -->
+    <table class="travel-table">
+        <tr>
+            <th>Destination</th>
+            <th>Attraction</th>
+        </tr>
+
+        <!-- Row for Paris -->
+        <tr>
+            <td>Paris</td>
+            <td>
+                <!-- clicking this image jumps to Eiffel Tower info -->
+                <a href="#eiffel">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Eiffel Tower" />
+                </a>
+            </td>
+        </tr>
+
+        <!-- Row for Rome -->
+        <tr>
+            <td>Rome</td>
+            <td>
+                <a href="#colosseum">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg" alt="Colosseum" />
+                </a>
+            </td>
+        </tr>
+
+        <!-- Row for New York -->
+        <tr>
+            <td>New York</td>
+            <td>
+                <a href="#liberty">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg" alt="Statue of Liberty" />
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- info section for Eiffel Tower, gets jumped to when u click its pic -->
+    <div id="eiffel" class="destination-info">
+        <h2>Eiffel Tower – Paris</h2>
+        <p>The Eiffel tower is a landmark in france that receives many tourists every year.</p>
+        <!-- small typo left on purpose lol -->
+    </div>
+
+    <!-- info section for Colosseum -->
+    <div id="colosseum" class="destination-info">
+        <h2>Colosseum – Rome</h2>
+        <p>The Colosseum in Rome is very famous and was used for gladiator fights.</p>
+        <!-- short but informative -->
+    </div>
+
+    <!-- info section for Statue of Liberty -->
+    <div id="liberty" class="destination-info">
+        <h2>Statue of Liberty – New York</h2>
+        <p>The Statue of Liberty is a symbol of freedom in America.</p>
+        <!-- would be nice to add year or who gifted it, but this is enough for now -->
+    </div>
+
+</body>
+
+</html>
